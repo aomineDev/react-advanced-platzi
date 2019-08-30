@@ -8,7 +8,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js'
+    filename: 'js/[name].js',
+    chunkFilename: 'js/[id].[chunkhash].js'
   },
   resolve: {
     extensions: ['.js', '.jsx']

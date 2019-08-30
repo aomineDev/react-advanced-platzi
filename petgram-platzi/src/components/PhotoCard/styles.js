@@ -30,6 +30,7 @@ export const Button = styled.button`
   align-items: center;
   padding-top: 8px;
   & svg {
+    cursor: pointer;
     margin-right: 4px;
   }
 `

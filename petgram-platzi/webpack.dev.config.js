@@ -1,6 +1,5 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const webpack = require('webpack')
 
 module.exports = {
   mode: 'development',
@@ -9,12 +8,12 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js'
+    filename: 'js/[name].js',
+    chunkFilename: 'js/[id].[chunkhash].js'
   },
   devServer: {
     port: 3000,
-    open: true,
-    hot: true
+    open: true
   },
   resolve: {
     extensions: ['.js', '.jsx']
@@ -29,7 +28,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public/index.html')
     })
