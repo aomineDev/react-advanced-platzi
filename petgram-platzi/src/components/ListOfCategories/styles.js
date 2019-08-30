@@ -1,10 +1,10 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { fadeInTop, fadeOutTop } from '../../styles/animatios'
 
 export const List = styled.ul`
   display: flex;
   overflow-x: auto;
-  &.fixed {
+  ${props => props.fixed && css`
     position: fixed;
     top: -4px;
     left: 0;
@@ -15,15 +15,24 @@ export const List = styled.ul`
     border-radius: 60px;
     box-shadow: 0 0 20px rgba(0, 0, 0, .3);
     z-index: 1;
-    transition: .3s linear;
-    transform: scale(.8) translateY(-150%);
-  }
-  &.fadeIn {
-    ${fadeInTop({ fillMode: 'forwards' })}
-  }
-  &.fixed.fadeOut {
-    ${fadeOutTop({ fillMode: 'forwards' })}
-  }
+
+    ${props => props.fadeIn && css`
+      ${fadeInTop({ fillMode: 'forwards' })}
+    `}
+
+    ${props => !props.fadeIn && css`
+      ${fadeOutTop({ fillMode: 'forwards' })}
+    `}
+
+  `}
+`
+
+export const LoaderWrapper = styled.li`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-left: 20px;
 `
 
 export const Item = styled.li`

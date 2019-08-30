@@ -28,8 +28,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background: #fefefe;
     height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     max-width: 500px;
     overscroll-behavior: none;
     width: 100%;

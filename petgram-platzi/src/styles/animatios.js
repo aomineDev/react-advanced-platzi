@@ -24,7 +24,7 @@ const fadeInTopKeyframes = keyframes`
   }
 `
 
-export const fadeInTop = ({ time = '.3s', type = 'linear', fillMode = 'none' } = {}) => css`
+export const fadeInTop = ({ time = '.5s', type = 'linear', fillMode = 'none' } = {}) => css`
   animation: ${time} ${fadeInTopKeyframes} ${type} ${fillMode};
 `
 const fadeOutTopKeyframes = keyframes`
@@ -36,6 +36,6 @@ const fadeOutTopKeyframes = keyframes`
   }
 `
 
-export const fadeOutTop = ({ time = '.3s', type = 'linear', fillMode = 'none' } = {}) => css`
+export const fadeOutTop = ({ time = '.5s', type = 'linear', fillMode = 'none' } = {}) => css`
   animation: ${time} ${fadeOutTopKeyframes} ${type} ${fillMode};
 `
