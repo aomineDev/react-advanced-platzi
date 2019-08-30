@@ -1,12 +1,16 @@
 import React from 'react'
 
-import HelloWorld from './components/HelloWorld'
+import { Logo } from './components/Logo'
+import { ListOfCategories } from './components/ListOfCategories'
+import { ListOfPhotoCards } from './components/ListOfPhotoCards'
 
-const App = () => (
-  <React.Fragment>
-    <h1>Hola PLatzi!! - desde App</h1>
-    <HelloWorld />
-  </React.Fragment>
+import { GlobalStyles } from './styles/GlobalStyles'
+
+export const App = () => (
+  <>
+    <Logo />
+    <GlobalStyles />
+    <ListOfCategories />
+    <ListOfPhotoCards />
+  </>
 )
-
-export default App
