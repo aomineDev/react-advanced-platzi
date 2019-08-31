@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 
-const load = keyframes`
+const loadDots = keyframes`
   0%,
   80%,
   100% {
@@ -26,7 +26,7 @@ export const Loader = styled.div`
     width: 2.5em;
     height: 2.5em;
     animation-fill-mode: both;
-    animation: ${load} 1.8s infinite ease-in-out;
+    animation: ${loadDots} 1.8s infinite ease-in-out;
   }
   &:before,
   &:after {

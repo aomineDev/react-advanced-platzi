@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 import { Category } from '../Category'
-import { LoadingDots } from '../shared/LoadingDots'
+import { LoadingSpinner } from '../shared/LoadingSpinner'
 
 import { List, Item, LoaderWrapper } from './styles'
 
@@ -43,8 +43,7 @@ export const ListOfCategories = () => {
         loading
           ? (
             <LoaderWrapper>
-              <Category />
-              <LoadingDots />
+              <LoadingSpinner />
             </LoaderWrapper>
           )
           : categories.map(category => <Item key={category.id}><Category {...category} /></Item>)
