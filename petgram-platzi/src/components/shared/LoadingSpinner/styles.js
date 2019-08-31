@@ -30,10 +30,10 @@ const loadSpinner = keyframes`
 
 export const LoaderSpinner = styled.div`
   color: #2196F3;
-  font-size: 10px;
-  margin: 40px auto;
-  width: .8em;
-  height: .8em;
+  font-size: 6px;
+  margin: 20px auto;
+  width: .5em;
+  height: .5em;
   border-radius: 50%;
   position: relative;
   text-indent: -9999em;

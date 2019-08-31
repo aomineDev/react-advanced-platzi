@@ -11,6 +11,13 @@ const loadDots = keyframes`
   }
 `
 
+export const LoadingWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+`
+
 export const Loader = styled.div`
   color: #2196F3;
   font-size: 10px;

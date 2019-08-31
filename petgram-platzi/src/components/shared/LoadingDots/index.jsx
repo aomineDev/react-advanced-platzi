@@ -1,7 +1,9 @@
 import React from 'react'
 
-import { Loader } from './styles'
+import { Loader, LoadingWrapper } from './styles'
 
 export const LoadingDots = () => (
-  <Loader>Loading...</Loader>
+  <LoadingWrapper>
+    <Loader>Loading...</Loader>
+  </LoadingWrapper>
 )

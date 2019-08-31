@@ -20,7 +20,7 @@ export const PhotoCard = ({ id, src = DEFAULT_IMAGE, likes = 0 }) => {
     <Article ref={element}>
       {show && (
         <>
-          <a href={`/detail/${id}`}>
+          <a href={`/?detail=${id}`}>
             <ImgWrapper>
               <Img src={src} alt='photo card' />
             </ImgWrapper>
