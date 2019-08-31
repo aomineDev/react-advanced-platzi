@@ -27,14 +27,6 @@ export const List = styled.ul`
   `}
 `
 
-export const LoaderWrapper = styled.li`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding-left: 20px;
-`
-
 export const Item = styled.li`
   padding: 0 8px;
 `

@@ -34,6 +34,12 @@ export const GlobalStyles = createGlobalStyle`
     width: 100%;
   }
 
+  a,
+  button {
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
   #app {
     box-shadow: 0 0 10px rgba(0, 0, 0, .05);
     min-height: 100vh;

@@ -28,6 +28,14 @@ const loadSpinner = keyframes`
   }
 `
 
+export const LoaderWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-left: 20px;
+`
+
 export const LoaderSpinner = styled.div`
   color: #2196F3;
   font-size: 6px;

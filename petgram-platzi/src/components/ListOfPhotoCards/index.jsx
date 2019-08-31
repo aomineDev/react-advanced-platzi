@@ -1,16 +1,9 @@
 import React from 'react'
 
 import { PhotoCard } from '../PhotoCard'
-import { LoadingDots } from '../shared/LoadingDots'
 
-export const ListOfPhotoCardsComponents = ({ data }) => (
+export const ListOfPhotoCardsComponent = ({ photos }) => (
   <main>
-    {data.loading
-      ? (
-        <LoadingDots />
-      )
-      : (
-        data.photos.map(photo => <PhotoCard key={photo.id} {...photo} />)
-      )}
+    {photos.map(photo => <PhotoCard key={photo.id} {...photo} />)}
   </main>
 )

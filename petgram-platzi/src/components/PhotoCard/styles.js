@@ -24,13 +24,3 @@ ${fadeIn()}
   width: 100%;
   object-fit: cover;
 `
-
-export const Button = styled.button`
-  display: flex;
-  align-items: center;
-  padding-top: 8px;
-  & svg {
-    cursor: pointer;
-    margin-right: 4px;
-  }
-`

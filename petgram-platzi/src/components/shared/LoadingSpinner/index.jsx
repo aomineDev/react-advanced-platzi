@@ -1,7 +1,9 @@
 import React from 'react'
 
-import { LoaderSpinner } from './styles'
+import { LoaderSpinner, LoaderWrapper } from './styles'
 
 export const LoadingSpinner = () => (
-  <LoaderSpinner>Loading...</LoaderSpinner>
+  <LoaderWrapper>
+    <LoaderSpinner>Loading...</LoaderSpinner>
+  </LoaderWrapper>
 )
