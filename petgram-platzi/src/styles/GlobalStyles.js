@@ -44,6 +44,6 @@ export const GlobalStyles = createGlobalStyle`
     box-shadow: 0 0 10px rgba(0, 0, 0, .05);
     min-height: 100vh;
     overflow-x: hidden;
-    padding-bottom: 10px;
+    padding-bottom: 60px;
   }
 `
