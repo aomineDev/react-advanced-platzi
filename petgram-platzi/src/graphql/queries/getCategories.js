@@ -7,7 +7,6 @@ const GET_CATEGORIES = gql`
     id
     cover
     emoji
-    path
   }
 }
 `

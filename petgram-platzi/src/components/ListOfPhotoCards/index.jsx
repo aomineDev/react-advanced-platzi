@@ -2,8 +2,10 @@ import React from 'react'
 
 import { PhotoCard } from '../PhotoCard'
 
+import { Container } from './styles'
+
 export const ListOfPhotoCardsComponent = ({ photos }) => (
-  <main>
+  <Container>
     {photos.map(photo => <PhotoCard key={photo.id} {...photo} />)}
-  </main>
+  </Container>
 )

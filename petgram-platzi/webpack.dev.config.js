@@ -9,11 +9,13 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].js',
+    publicPath: '/',
     chunkFilename: 'js/[id].[chunkhash].js'
   },
   devServer: {
     port: 3000,
-    open: true
+    open: true,
+    historyApiFallback: true
   },
   resolve: {
     extensions: ['.js', '.jsx']
@@ -29,7 +31,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'public/index.html')
+      template: path.resolve(__dirname, 'public/index.html'),
+      favicon: './public/favicon.ico'
     })
   ]
 }

@@ -17,7 +17,7 @@ export const fadeIn = ({ time = '1s', type = 'ease' } = {}) => css`
 
 const fadeInTopKeyframes = keyframes`
   from {
-    transform: scale(.8) translateY(-150%)
+    transform: scale(.8) translateY(-120%)
   }
   to {
     transform: scale(.8) translateY(0)
@@ -32,7 +32,7 @@ const fadeOutTopKeyframes = keyframes`
     transform: scale(.8) translateY(0)
   }
   to {
-    transform: scale(.8) translateY(-150%)
+    transform: scale(.8) translateY(-120%)
   }
 `
 

@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@apollo/react-hooks": "^3.0.1",
+    "@reach/router": "^1.2.1",
     "apollo-boost": "^0.4.4",
     "graphql": "^14.5.4",
     "intersection-observer": "^0.7.0",
