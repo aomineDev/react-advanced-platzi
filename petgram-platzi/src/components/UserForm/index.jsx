@@ -4,7 +4,7 @@ import { useInputValue } from '../../hooks/useInputValue'
 
 import { Form, Input, Button, Title, GoSignIn, GoBack, ErrorMsg } from './styles'
 
-export const UserForm = ({ disabled, error, onSubmit, isLogin, handleClick }) => {
+export const UserForm = ({ disabled, errorLogIn, errorSignIn, onLogIn, onSignIn, isLogin, handleClick }) => {
   const email = useInputValue('')
   const password = useInputValue('')
 
@@ -14,27 +14,34 @@ export const UserForm = ({ disabled, error, onSubmit, isLogin, handleClick }) =>
 
   const handleSubmit = e => {
     e.preventDefault()
-    onSubmit(email.value, password.value)
+    if (isLogin) {
+      onLogIn(email.value, password.value)
+    } else {
+      onSignIn(email.value, password.value)
+    }
   }
 
   return (
     <Form disabled={disabled} onSubmit={handleSubmit}>
       <Title>{title}</Title>
       <Input
-        type='text'
+        type='email'
         placeholder='Email'
+        required
         {...email}
         disabled={disabled}
       />
       <Input
         type='password'
         placeholder='Password'
+        required
         {...password}
         disabled={disabled}
       />
       <Button disabled={disabled}>GO!</Button>
-      {error && <ErrorMsg>{error}</ErrorMsg>}
-      <ButtonComponent type='button' onClick={handleClick}>{ButtonName}!</ButtonComponent>
+      {isLogin && errorLogIn && <ErrorMsg>{errorLogIn}</ErrorMsg>}
+      {!isLogin && errorSignIn && <ErrorMsg>{errorSignIn}</ErrorMsg>}
+      <ButtonComponent type='button' disabled={disabled} onClick={handleClick}>{ButtonName}!</ButtonComponent>
     </Form>
   )
 }

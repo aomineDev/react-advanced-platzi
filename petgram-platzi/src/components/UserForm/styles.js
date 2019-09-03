@@ -47,12 +47,18 @@ export const GoSignIn = styled.button`
   align-self: flex-end;
   margin-top: 8px;
   color: #2196F3;
+  &:disabled {
+    color: #ccc;
+  }
 `
 
 export const GoBack = styled.button`
   align-self: flex-start;
   margin-top: 8px;
   color: #2196F3;
+  &:disabled {
+    color: #ccc;
+  }
 `
 
 export const ErrorMsg = styled.span`
