@@ -42,7 +42,7 @@ export const GlobalStyles = createGlobalStyle`
 
   #app {
     box-shadow: 0 0 10px rgba(0, 0, 0, .05);
-    min-height: 100vh;
+    min-height: calc(100vh - 60px);
     overflow-x: hidden;
     padding-bottom: 60px;
   }
