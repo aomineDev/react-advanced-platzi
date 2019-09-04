@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { fadeInTop, fadeOutTop } from '../../styles/animatios'
+import { fadeInTop } from '../../styles/animatios'
 
 export const List = styled.ul`
   display: flex;
@@ -14,16 +14,14 @@ export const List = styled.ul`
     background-color: #fff;
     border-radius: 60px;
     box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+    transition: transform .5s linear;
+    transform: scale(.8) translateY(-120%);
     z-index: 1;
 
     ${props => props.fadeIn && css`
-      ${fadeInTop({ fillMode: 'forwards' })}
+      /* ${fadeInTop({ fillMode: 'forwards' })} */
+      transform: scale(.8) translateY(0);
     `}
-
-    ${props => !props.fadeIn && css`
-      ${fadeOutTop({ fillMode: 'forwards' })}
-    `}
-
   `}
 `
 

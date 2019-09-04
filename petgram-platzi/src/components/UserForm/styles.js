@@ -6,8 +6,6 @@ export const Form = styled.form`
   align-items: center;
   flex-direction: column;
   height: calc(100vh - 60px);
-  padding-right: 15px;
-  padding-left: 15px;
 `
 
 export const Title = styled.h2`
@@ -17,7 +15,7 @@ export const Title = styled.h2`
 
 export const Input = styled.input`
   display: block;
-  width: 100%;
+  width: calc(100% - 8px);
   margin-bottom: 8px;
   padding: 8px 4px;
   border: 1px solid #ccc;
@@ -29,20 +27,6 @@ export const Input = styled.input`
   }
 `
 
-export const Button = styled.button`
-  display: block;
-  width: 100%;
-  height: 32px;
-  border-radius: 3px;
-  background-color: #8d00ff;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  transition: .3s;
-  &:disabled {
-    opacity: .2;
-  }
-`
 export const GoSignIn = styled.button`
   align-self: flex-end;
   margin-top: 8px;

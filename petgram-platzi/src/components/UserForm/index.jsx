@@ -2,15 +2,18 @@ import React from 'react'
 
 import { useInputValue } from '../../hooks/useInputValue'
 
-import { Form, Input, Button, Title, GoSignIn, GoBack, ErrorMsg } from './styles'
+import { SubmitButton } from '../SubmitButton'
 
-export const UserForm = ({ disabled, errorLogIn, errorSignIn, onLogIn, onSignIn, isLogin, handleClick }) => {
+import { Form, Input, Title, GoSignIn, GoBack, ErrorMsg } from './styles'
+
+export const UserFormComponent = ({ disabled, errorLogIn, errorSignIn, onLogIn, onSignIn, isLogin, handleClick }) => {
   const email = useInputValue('')
   const password = useInputValue('')
 
   const title = isLogin ? 'LOG IN' : 'SIGN IN'
-  const ButtonComponent = isLogin ? GoSignIn : GoBack
+  const ToggleMode = isLogin ? GoSignIn : GoBack
   const ButtonName = isLogin ? 'Sign In here' : 'Go Back'
+  const SubmitButtonName = isLogin ? 'Log In' : 'Sign In'
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -38,10 +41,10 @@ export const UserForm = ({ disabled, errorLogIn, errorSignIn, onLogIn, onSignIn,
         {...password}
         disabled={disabled}
       />
-      <Button disabled={disabled}>GO!</Button>
+      <SubmitButton disabled={disabled}>{SubmitButtonName}</SubmitButton>
       {isLogin && errorLogIn && <ErrorMsg>{errorLogIn}</ErrorMsg>}
       {!isLogin && errorSignIn && <ErrorMsg>{errorSignIn}</ErrorMsg>}
-      <ButtonComponent type='button' disabled={disabled} onClick={handleClick}>{ButtonName}!</ButtonComponent>
+      <ToggleMode type='button' disabled={disabled} onClick={handleClick}>{ButtonName}!</ToggleMode>
     </Form>
   )
 }

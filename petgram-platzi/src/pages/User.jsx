@@ -1,5 +1,4 @@
 import React from 'react'
+import { UserUI } from '../layout/UserUI'
 
-export const User = () => (
-  <h1>User</h1>
-)
+export const User = () => <UserUI />

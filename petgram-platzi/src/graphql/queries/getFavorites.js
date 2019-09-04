@@ -1,7 +1,7 @@
 import { useQuery } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
 
-const getFavs = gql`
+const GET_FAVS = gql`
   query getFavs {
     favs {
       id
@@ -12,3 +12,10 @@ const getFavs = gql`
     }
   }
 `
+
+export const getFavs = () => {
+  const { loading, error, data } = useQuery(GET_FAVS, {
+    fetchPolicy: 'network-only'
+  })
+  return { loading, error, data }
+}
