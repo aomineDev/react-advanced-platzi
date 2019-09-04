@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 export const Photo = styled.li`
   height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
 `
 
 export const Image = styled.img`
