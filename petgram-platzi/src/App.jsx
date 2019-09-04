@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Router } from '@reach/router'
 
-import Context from './Context'
+import { Context } from './Context'
 
 import { Navbar } from './layout/Navbar'
 import { Home } from './pages/Home'
@@ -12,17 +12,18 @@ import { NotRegisteredUser } from './pages/NotRegisteredUser'
 
 import { GlobalStyles } from './styles/GlobalStyles'
 
-export const App = () => (
-  <>
-    <GlobalStyles />
-    <Router>
-      <Home path='/' />
-      <Home path='/pet/:categoryId' />
-      <Detail path='/detail/:detailId' />
-    </Router>
-    <Context.Consumer>
+export const App = () => {
+  const { isAuth } = useContext(Context)
+  return (
+    <>
+      <GlobalStyles />
+      <Router>
+        <Home path='/' />
+        <Home path='/pet/:categoryId' />
+        <Detail path='/detail/:detailId' />
+      </Router>
       {
-        ({ isAuth }) => isAuth
+        isAuth
           ? (
             <Router>
               <Favs path='/favs' />
@@ -36,7 +37,7 @@ export const App = () => (
             </Router>
           )
       }
-    </Context.Consumer>
-    <Navbar />
-  </>
-)
+      <Navbar />
+    </>
+  )
+}
