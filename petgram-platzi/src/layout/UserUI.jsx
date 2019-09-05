@@ -9,7 +9,7 @@ export const UserUI = () => {
   const { removeAuth } = useContext(Context)
   return (
     <Container>
-      <Title>User</Title>
+      <Title>User 👩‍🚀</Title>
       <SubmitButton action={removeAuth}>Cerrar Sesión</SubmitButton>
     </Container>
   )

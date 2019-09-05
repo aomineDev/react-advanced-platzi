@@ -8,7 +8,7 @@ import { Home } from './pages/Home'
 import { Detail } from './pages/Detail'
 import { Favs } from './pages/Favs'
 import { User } from './pages/User'
-import { NotRegisteredUser } from './pages/NotRegisteredUser'
+import { Login } from './pages/Login'
 import { NotFound } from './pages/NotFound'
 
 import { GlobalStyles } from './styles/GlobalStyles'
@@ -22,7 +22,7 @@ export const App = () => {
         <Home path='/' />
         <Home path='/pet/:categoryId' />
         <Detail path='/detail/:detailId' />
-        {!isAuth && <NotRegisteredUser path='/login' />}
+        {!isAuth && <Login path='/login' />}
         {isAuth && <Redirect from='/login' to='/' noThrow />}
         {!isAuth && <Redirect from='/favs' to='login' noThrow />}
         <Favs path='/favs' />
