@@ -8,9 +8,9 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/[name].[hash].js',
+    filename: 'js/[name].js',
     publicPath: '/',
-    chunkFilename: 'js/[id].[chunkhash].js'
+    chunkFilename: 'js/[id].js'
   },
   devServer: {
     port: 3000,
