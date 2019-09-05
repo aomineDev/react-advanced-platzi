@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import { Fav } from '../Fav'
 import { Container } from '../Container'
@@ -6,7 +7,7 @@ import { Title } from '../Title'
 
 import { List } from './styles'
 
-export const LisOfFavsComponent = ({ favs }) => (
+export const ListOfFavsComponent = ({ favs }) => (
   <Container>
     <Title>Favorite Photos 🖤</Title>
     <List>
@@ -16,3 +17,12 @@ export const LisOfFavsComponent = ({ favs }) => (
     </List>
   </Container>
 )
+
+ListOfFavsComponent.propTypes = {
+  favs: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      src: PropTypes.string.isRequired
+    })
+  ).isRequired
+}
