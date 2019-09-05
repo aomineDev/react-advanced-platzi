@@ -8,7 +8,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/[name].js',
+    filename: 'js/[name].[hash].js',
     publicPath: '/',
     chunkFilename: 'js/[id].[chunkhash].js'
   },
@@ -32,7 +32,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public/index.html'),
-      favicon: './public/favicon.ico'
+      favicon: path.resolve(__dirname, 'public/favicon.ico')
     })
   ]
 }

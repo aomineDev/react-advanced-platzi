@@ -35,3 +35,5 @@ export const ListOfCategoriesComponent = ({ categories }) => {
     </>
   )
 }
+
+export const ListOfCategories = React.memo(ListOfCategoriesComponent)

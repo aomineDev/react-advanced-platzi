@@ -3,7 +3,7 @@ import React from 'react'
 import { Meta } from '../Meta'
 import { Error404 } from '../components/Error404'
 
-export const NotFound = () => {
+export default () => {
   const meta = {
     title: 'No se encotro la página',
     description: 'No se pudo encontrar la página que buscas'

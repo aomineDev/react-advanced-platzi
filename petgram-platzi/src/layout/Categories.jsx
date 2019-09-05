@@ -2,7 +2,7 @@ import React from 'react'
 
 import { getCategories } from '../graphql/queries/getCategories'
 
-import { ListOfCategoriesComponent } from '../components/ListOfCategories'
+import { ListOfCategories } from '../components/ListOfCategories'
 import { LoadingSpinner } from '../components/shared/LoadingSpinner'
 
 export const Categories = () => {
@@ -13,5 +13,5 @@ export const Categories = () => {
 
   if (error) return `Error! ${error}`
 
-  return <ListOfCategoriesComponent categories={categories} />
+  return <ListOfCategories categories={categories} />
 }

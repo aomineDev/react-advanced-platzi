@@ -5,7 +5,7 @@ import { Logo } from '../components/Logo'
 import { Categories } from '../layout/Categories'
 import { PhotoCards } from '../layout/PhotoCards'
 
-export const Home = ({ categoryId }) => {
+export const HomePage = ({ categoryId }) => {
   const meta = {
     title: 'by aomine',
     description: 'Con Petgram puedes econtrar todo ti tipo de animales domiesticos, So Cute :3'
@@ -20,3 +20,5 @@ export const Home = ({ categoryId }) => {
     </>
   )
 }
+
+export default React.memo(HomePage, (prevProps, props) => prevProps.categoryId === props.categoryId)

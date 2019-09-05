@@ -3,7 +3,7 @@ import React from 'react'
 import { Meta } from '../Meta'
 import { UserForm } from '../layout/UserForm'
 
-export const Login = () => {
+export default () => {
   const meta = {
     title: 'Login-Sigin',
     description: 'Se parte de petgram :D'
