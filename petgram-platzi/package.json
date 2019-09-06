@@ -9,7 +9,7 @@
     "serve": "webpack && npx serve dist -s",
     "now-build": "npm run build",
     "lint": "standard",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress open"
   },
   "keywords": [],
   "author": "aomine- Code",
