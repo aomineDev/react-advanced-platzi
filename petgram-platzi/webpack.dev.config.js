@@ -8,12 +8,12 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/[name].js',
+    filename: 'js/[name].[hash].js',
     publicPath: '/',
-    chunkFilename: 'js/[id].js'
+    chunkFilename: 'js/[id].[chunkhash].js'
   },
   devServer: {
-    port: 3000,
+    port: 3220,
     open: true,
     historyApiFallback: true
   },

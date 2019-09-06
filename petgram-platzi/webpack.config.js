@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const WebpackPwaManifestPlugin = require('webpack-pwa-manifest')
 
 module.exports = {
   mode: 'development',
@@ -36,6 +37,19 @@ module.exports = {
     }),
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: ['**/app.*']
+    }),
+    new WebpackPwaManifestPlugin({
+      name: 'Petgram - by aomine',
+      short_name: 'Petgram',
+      description: 'Con Petgram puedes encontrar fotos de animales domesticos muy fácilmente',
+      background_color: '#fff',
+      theme_color: '#b1a',
+      icons: [
+        {
+          src: path.resolve(__dirname, 'public/icon.png'),
+          sizes: [96, 128, 192, 256, 384, 512]
+        }
+      ]
     })
   ]
 }
