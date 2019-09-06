@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="apple-touch-icon" href="/apple-icon.png">
   <title>Petgram | Platzi</title>
 <meta name="theme-color" content="#b1a" /><link rel="manifest" href="/manifest.623e0cd13f3b392a80f144e65e533c4a.json" /></head>
 <body>
@@ -11,5 +12,18 @@
   <noscript>
     <h3>Esta App necesita de JavaScript para su correcto funcionamiento</h3>
   </noscript>
-<script type="text/javascript" src="/js/app.ceebaecf07a4cc89a32b.js"></script></body>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => {
+            console.log('service worker registrado')
+          })
+          .catch(registrationError => {
+            console.log('SW error: ', registrationError)
+          })
+      })
+    }
+  </script>
+<script type="text/javascript" src="/js/app.80f9adc87f2b1c008750.js"></script></body>
 </html>

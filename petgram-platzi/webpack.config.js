@@ -2,9 +2,10 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const WebpackPwaManifestPlugin = require('webpack-pwa-manifest')
+const WorboxWebpackPlugin = require('workbox-webpack-plugin')
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: {
     app: path.resolve(__dirname, 'src/index.js')
   },
@@ -33,7 +34,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public/index.html'),
-      plugin: path.resolve(__dirname, 'public/favicon.ico')
+      favicon: path.resolve(__dirname, 'public/favicon.ico')
     }),
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: ['**/app.*']
@@ -48,6 +49,24 @@ module.exports = {
         {
           src: path.resolve(__dirname, 'public/icon.png'),
           sizes: [96, 128, 192, 256, 384, 512]
+        }
+      ]
+    }),
+    new WorboxWebpackPlugin.GenerateSW({
+      runtimeCaching: [
+        {
+          urlPattern: new RegExp('https://(res.cloudinary.com|images.unplash.com)'),
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'images'
+          }
+        },
+        {
+          urlPattern: new RegExp('https://aomine-petgram-api.now.sh/graphql'),
+          handler: 'NetworkFirst',
+          options: {
+            cacheName: 'api'
+          }
         }
       ]
     })
