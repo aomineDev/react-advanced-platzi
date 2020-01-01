@@ -19,6 +19,7 @@
 * Los componentes son la base para los layouts
 * Los componentes se pueden reutilizar entre si para crear más componentes
 * No interactua con la api
+* Es el único que trabaja con los estilos
 
 ### Layout
 
@@ -26,6 +27,7 @@
 * Un layout no se puede reutilizar dentro de otro layout
 * Interactua con la api
 * Si esta trabajando con la api se encarga solo de manejar los estados (loading, error, data)
+* No trabaja con los estilos
 
 ### Pages
 
@@ -33,6 +35,7 @@
 * Un page no se pueden reutilizar dentro de otro page
 * Son los archivos utilizados en el router
 * No interactua con la api
+* No trabaja con los estilos
 
 <div align="right">
   <small><a href="#index">↑ Volver al inicio</a></small>
