@@ -15,11 +15,12 @@
 
 ### Components
 
-* Algo se convierte en un componente si se usa más de una vez
+* Algo se convierte en un componente si se usa más de una vez o si tiene funcionalidad propia
 * Los componentes son la base para los layouts
 * Los componentes se pueden reutilizar entre si para crear más componentes
 * No interactua con la api
 * Es el único que trabaja con los estilos
+* Solo usa el estado para la funcionalidad correcta del componente
 
 ### Layout
 
@@ -28,6 +29,7 @@
 * Interactua con la api
 * Si esta trabajando con la api se encarga solo de manejar los estados (loading, error, data)
 * No trabaja con los estilos
+* Usa el estado para trabajar con la data global o que sera enviada a una api 
 
 ### Pages
 
