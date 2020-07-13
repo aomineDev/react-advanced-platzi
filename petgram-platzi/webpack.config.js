@@ -62,7 +62,7 @@ module.exports = {
           }
         },
         {
-          urlPattern: new RegExp('https://aomine-petgram-api.now.sh/graphql'),
+          urlPattern: new RegExp('https://aomine-petgram-api.vercel.app/graphql'),
           handler: 'NetworkFirst',
           options: {
             cacheName: 'api'
